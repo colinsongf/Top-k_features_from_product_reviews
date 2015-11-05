@@ -4,6 +4,7 @@ import MySQLdb
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import wordnet
+from nltk.corpus import stopwords
 
 # This function removes stop words from the list of nouns (although there won't be stop words which are nouns)
 def stopword(token):
@@ -69,4 +70,4 @@ if __name__ == "__main__":
     	filter_word=stopword(find_nonun)
     	print("Stop Word = %s") %(filter_word)
     	
-	    i += 1
+    	i += 1
