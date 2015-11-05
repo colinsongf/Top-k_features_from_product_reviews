@@ -1,9 +1,12 @@
-# First, record is fetched from the database in line 13 and then reviews are then worked upon
+# First, record is fetched from the database in line 16 and then reviews are then worked upon
 # The text review sentences are tokenized one-by-one and finally all the tokens are printed
 
-import nltk 
+import MySQLdb
+import nltk
 from nltk.tokenize import word_tokenize
 
+
+# This function tokenize the review sentence and returns its result
 def get_tokens(row):
     token = word_tokenize(row)
     return token
@@ -20,7 +23,7 @@ cur.execute("SELECT reviewText FROM  reviewElectronicsHelpful WHERE prodid='0528
 i = 0
 for row in cur.fetchall() :
     print "\n\n","Review = : ",i," Data = : ",row
-	token=get_tokens(row[0])
+	token = get_tokens(row[0])	# Function call
 	print ""
 	print("tokens = %s") %(token)
 	i += 1
