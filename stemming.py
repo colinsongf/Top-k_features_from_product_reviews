@@ -12,11 +12,11 @@ from nltk.stem import WordNetLemmatizer
 # This function prfoems stemming on the list of nouns that we got previously
 def stemming(filter_word):
 	after_steming = []
-	ps = PorterStemmer()
+	ps = PorterStemmer()	# making object
  	for i in filter_word:
-        after_steming.append(ps.stem(i)) 
+        after_steming.append(ps.stem(i.lower())) 
 	for i in after_steming:
-		all_words.append(i.lower())
+		all_words.append(i)
 	return after_steming
 
 # This function removes stop words from the list of nouns (although there won't be stop words which are nouns)
