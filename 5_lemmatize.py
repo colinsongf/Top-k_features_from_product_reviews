@@ -9,7 +9,7 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 
-# This function performs stemming on the list of nouns that we got previously
+# This function performs lemmatization on the list of nouns that we got previously
 def lema(filter_word):
 	filter_lema=[]
 	lema=WordNetLemmatizer()
