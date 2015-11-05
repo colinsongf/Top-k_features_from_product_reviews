@@ -9,7 +9,7 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 
-# This function prfoems stemming on the list of nouns that we got previously
+# This function performs stemming on the list of nouns that we got previously
 def stemming(filter_word):
 	after_steming = []
 	ps = PorterStemmer()	# making object
