@@ -1,5 +1,5 @@
 # In the list of detected nouns, stemming is performed
-# This means duplications are removed and all alike words (eat,eats) are replaced is single word
+# This means all the words are replaced by their root word
 
 import MySQLdb
 import nltk
