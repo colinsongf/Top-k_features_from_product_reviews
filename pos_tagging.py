@@ -29,7 +29,7 @@ if __name__ == "__main__":
 	cur.execute("SELECT reviewText FROM  reviewElectronicsHelpful WHERE prodid='0528881469'")
 	i = 0
 	for row in cur.fetchall() :
-    		print "\n\n","Review = : ",i," Data = : ",row
+    	print "\n\n","Review = : ",i," Data = : ",row
 	
 		# Function call
 		token = get_tokens(row[0])
