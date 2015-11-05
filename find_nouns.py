@@ -1,4 +1,4 @@
-# The result of get_tokens() function is used and POS tagging is done here
+# From the result of POS tagging, only words tagged as nouns are found
 
 import MySQLdb
 import nltk
