@@ -17,6 +17,16 @@ def stemming(filter_word):
 	for i in after_steming:
 		all_words.append(i)
 	return after_steming
+	
+# This function performs lemmatization on the list of nouns that we got previously
+def lema(filter_word):
+	filter_lema=[]
+	lema=WordNetLemmatizer()
+	for i in filter_word:
+ 		filter_lema.append(lema.lemmatize(i.lower(),pos='n'))
+	for i in filter_lema:
+		all_words_l.append(i)
+	return filter_lema
 
 # This function removes stop words from the list of nouns (although there won't be stop words which are nouns)
 def stopword(token):
@@ -85,6 +95,10 @@ if __name__ == "__main__":
     	# Function call
         after_steming = stemming(filter_word)
         print ("Steming = %s") %(after_steming)
+        
+        # Function call
+        filter_lema=lema(filter_word)
+        print("Lemmatize = %s") %(filter_lema)
     	
     	i += 1
     	
